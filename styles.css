@@ -1,0 +1,337 @@
+*{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* width: 100vw; */
+    /* height: 100vh; */
+}
+
+body{
+    background-color: rgb(233, 233, 233);
+    font-size: 20px;
+    
+}
+
+img{
+    display: block;
+}
+h1, h2 {
+    margin: 0;
+}
+
+img[src$=".svg"] {
+    width: 25px;
+}
+
+img[src$=".jpg"], img[src$=".jpeg"], img[src$=".png"]{
+    border-radius: 50%;
+    width: 60px;
+}
+
+button{
+    border-style: none;
+    font-size: 18px;
+}
+
+#container{
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    min-height: 100vh;
+    grid-template-rows: 220px 1fr;
+}
+
+#header{
+    grid-column: 2 /4;
+    display: grid;
+    grid-template-rows: 50px 100px;
+    padding-top: 25px;
+    gap: 30px;
+    box-shadow: 0px 1px 6px rgb(148, 148, 148);
+}
+
+.header-top{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    /* justify-content: space-between; */
+}
+
+.header-bottom{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    /* justify-items: space-between; */
+}
+
+.profile{
+    display: grid;
+    grid-template-columns: 100px 2fr;
+    padding-left: 80px;
+    align-items: center;
+    align-content: start;
+}
+
+.links{
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    gap: 60px;
+    align-items: center;
+    /* justify-items: stretch; */
+    justify-items: center;
+    padding-right: 40px;
+}
+.top-left{
+    display: grid;
+    align-items: center;
+    justify-content:stretch;
+    padding-left: 80px;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 30px 1fr;
+}
+
+.top-right{
+    display: grid;
+    grid-template-columns: 1fr 70px 200px;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+}
+
+.top-right > div:nth-child(1){
+    justify-self: end;
+    padding-right: 30px;
+}
+
+#sidebar{
+    background-color: rgb(65, 146, 240);
+    color: white;
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    display: grid;
+    grid-template-rows: 50px 300px 155px;
+    gap: 50px;
+    padding-left: 25px;
+    padding-top: 25px;
+    /* padding-top: px; */
+}
+
+#sidebar img{
+    /* padding-right: 20px; */
+    
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+.sidelinks{
+    transition: 0.2s;
+}
+.sidelinks:hover{
+    transform: scale(1.08);
+    transition: 0.3s linear;
+}
+.sidebar-top{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    align-items: center;
+    gap: 20px;
+}
+.sidebar-middle{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    align-items: center;
+    /* justify-items: center; */
+}
+
+.sidebar-middle img .sidebar-bottom img{
+    padding-right: 2px;
+}
+
+.sidebar-bottom{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    align-items: center;
+}
+.sidebar-top img {
+    width: 50px;
+}
+
+.sidebar-middle, .sidebar-bottom{
+    font-size: 22px;
+    font-weight: 600;
+    padding-left: 15px;
+}
+
+#main-content{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    padding: 25px;
+}
+
+.left-content{
+    display: grid;
+    grid-template-columns: repeat(2,minmax(300px, 1fr));
+    grid-template-rows: 20px repeat(3, minmax(300px, 1fr));
+    grid-column: 1 / 2;
+    gap: 35px;
+}
+
+.right-content {
+    display: grid;
+    grid-template-rows: 47px 1fr 70px 1fr;
+    padding-left: 35px;
+
+}
+
+.left-heading{
+    grid-column: 1 / span 2 ;
+    grid-row: 1 / 2;
+    /* background-color: white; */
+    /* height: 50px; */
+}
+
+.right-heading-one{
+    grid-row: 1 / 2 ;
+}
+
+.right-heading-two{
+    /* padding-bottom: 15px; */
+    padding-top: 30px;
+}
+
+.content-images{
+    display: grid;
+    grid-template-columns: 2.5fr 1fr 1fr;
+    justify-items: end;
+    /* padding-right: 20px; */
+    align-items: end;
+}
+
+.content{
+    display: grid;
+    grid-template-rows: 4fr 1fr;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 12px 1px black;
+    border-left: 12px solid rgb(171, 210, 255);
+    transition: 1s;
+    /* grid-column: 1/2; */
+}
+
+.content:hover{
+    border-left: 12px solid rgb(65, 146, 240);
+    transition: 0.7s;
+    transform: scale(1.05);
+}
+
+.users{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 15px;
+}
+
+.users img{
+    justify-self: end;
+}
+.trending{
+    display: grid;
+    /* grid-template-rows: repeat(4,1fr); */
+    padding: 25px;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 1px 1px 12px 1px black;
+    transition: 0.5s;
+}
+
+.trending:hover{
+    box-shadow: 1px 1px 12px 1px rgb(65, 146, 240);
+    transition: 0.5s;
+}
+input {
+    width: 70%;
+    height: 30px;
+    border-style: none;
+    border-radius: 15px;
+    background-color: rgb(228, 228, 228);
+}
+
+input:hover{
+    border: 2px solid rgb(65, 146, 240);
+}
+
+input:focus{
+    outline-color: rgb(65, 146, 240);
+}
+
+div > p:nth-child(1){
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.announcements div>p {
+    font-size: 16px;
+}
+
+.announcements div:first-child{
+    padding-bottom: 10px;
+}
+
+.center {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+ hr{
+    height: 0;
+ }
+.announcements div:last-child{
+    padding-top: 10px;
+}
+.announcements {
+    display: grid;
+    padding: 25px;
+    margin-top: 8px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 12px 1px black;
+    transition: 0.5s;
+}
+
+.announcements:hover{
+    box-shadow: 1px 1px 12px 1px rgb(65, 146, 240);
+    transition: 0.5s;
+}
+.header-bottom img{
+    width: 90px;
+}
+
+.link {
+    background-color: rgb(65, 146, 240);
+    color: white;
+    width: 140px;
+    height: 40px;
+    border-radius: 25px;
+    align-content: center;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.link:hover{
+    width: 150px;
+    height: 45px;
+    transition: 0.3s;
+}
+
+.left-content > div:nth-child(n+2) {
+    background-color: white;
+}
+
+.announcements, .trending, #header{
+    background-color: white;
+}
+
+.left-heading, .right-heading-one, .right-heading-two {
+    font-size: 20px;
+    font-weight: 700;
+}
